@@ -15,14 +15,14 @@
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Plano Base</a>
        <ul class="right hide-on-med-and-down">
         <li><a href="index.html">Página Inicial</a></li>
-        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="produtos">Produtos</a></li>
         <li><a href="clientes.html">Clientes</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="index.html">Página Inicial</a></li>
-          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="produtos">Produtos</a></li>
         <li><a href="clientes.html">Clientes</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>

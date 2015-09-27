@@ -1,9 +1,10 @@
 <nav>
 <div class="nav-wrapper black">
-	<p>Lista de produtos</p>		
+	<p>Plano Base - Painel de Controle</p>		
 </nav>
 
 <div class="container">
+	<h4>Lista de Produtos</h4>
 	<table  class="striped " >
 		<tr>
 			<th>#</th>
@@ -26,8 +27,8 @@
 					<td> <?php echo $produto['cor'] ?></td>
 					<td> <?php echo $produto['imagem'] ?></td>
 					<td> <?php echo $produto['preco'] ?></td>
-					<td> <a href=<?php echo "#"  ?>  "black"><i id="btnEditar" class="material-icons">mode_edit</i></a></td>
-					<td> <a href=<?php echo "#"  ?> "black" ><i id="btnExcluir" class="material-icons">delete</i></a></td>					
+					<td> <a class="btn-floating btn-small" id="btnEditar"  ><i  class="material-icons">mode_edit</i></a></td>
+					<td> <a class="btn-floating btn-small red" id="btnExcluir"  ?><i  class="material-icons">delete</i></a></td>					
 				</tr>
 		<?php endforeach; ?>
 	</table>

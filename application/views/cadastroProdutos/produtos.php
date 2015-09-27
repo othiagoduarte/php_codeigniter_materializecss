@@ -4,7 +4,7 @@
 </nav>
 
 <div class="container">
-	<table  class="centered" >
+	<table  class="striped " >
 		<tr>
 			<th>#</th>
 			<th>Nome</th>
@@ -41,21 +41,21 @@
 		<div class="modal-content">
 		<h4>Cadastrar Produto</h4>
 			<div class="row col s12">
-				<form ">
+				<form action="cadastroprodutos" method="post">
 			     	<div class="row col s12">
 			        	<div class="input-field  col s9">
-			          	<input id="nome" type="text" >
+			          	<input id="nome" type="text" name="nome" >
 			          	<label for="nome">Nome do Produto</label>
 			        	</div>
 						<div class="input-field  col s3">
-							<input id="preco" type="text" name="numbers" pattern="[0-9]+$" />
+							<input id="preco" type="text" name="numbers" pattern="[0-9][.-,]+$" />
 			      			<label for="preco">Preço</label>
 						  </div>
 					  </div>
 				  	<div class="row col s12">
 						<div class="col s6 ">
 							<label>Tipo do produto</label>
-							<select class="browser-default"> 
+							<select class="browser-default" name="tipo"> 
 						 		<option value="0" disabled selected>Selecione</option>
 				      			<?php foreach ($lista_tipos as $tipo) : ?>
 									<option value= <?php echo $tipo->idTipo; ?> > <?php  echo $tipo->nome; ?></option>
@@ -64,7 +64,7 @@
 						</div>
 						<div class="col s3 ">
 							<label>Tamanho</label>
-							<select class="browser-default">
+							<select class="browser-default" name="tamanho">
   								<option value="0" disabled selected>Selecione</option>
 								<?php foreach ($lista_tamanhos as $tamanho) : ?>
 									<option value= <?php echo $tamanho->idTamanho; ?> > <?php  echo $tamanho->nome; ?></option>
@@ -73,7 +73,7 @@
 				    	</div>
 						<div class="col s3 ">
 							<label>Cor</label>
-							<select class="browser-default">
+							<select class="browser-default" name="cor">
   								<option value="0" disabled selected>Selecione</option>
 								<?php foreach ($lista_cores as $cor) : ?>
 									<option value= <?php echo $cor->idCor; ?> > <?php  echo $cor->nome; ?></option>
@@ -84,7 +84,7 @@
 							<div class="file-field input-field ">
 						      <div class="btn col s2">
 						        <span>File</span>
-						        <input type="file" multiple>
+						        <input type="file" >
 						      </div>
 						      <div class="file-path-wrapper col s9">
 						        <input class="file-path validate" type="text" placeholder="selecione uma imagem">
@@ -93,13 +93,14 @@
 							 </div>
 						</div>
 					</div>				  
+			   		<div class="modal-footer">
+						<button id="gravarProduto" class="btn waves-effect waves-light " type="submit" name="action">
+			 			Gravar<i class="material-icons right">done_all</i>
+			 		</button>
+				</div>
 			   	</form>
 		  </div>
 		</div>
-		<div class="modal-footer">
-			<button id="gravarProduto" class="btn waves-effect waves-light " type="submit" name="action">
-			 	Gravar<i class="material-icons right">done_all</i>
-			 </button>
-		</div>
+		
 	</div>
 </div>

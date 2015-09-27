@@ -18,8 +18,10 @@ class CadastroProdutos extends CI_Controller {
 		/*Lista de produtos*/
 		$lista_produtos = array();
 		
+		 	
+		
 		$produtotemp = array();	
-		$produtotemp['nome'] = 'camisa básica';
+		$produtotemp['nome'] ='Camisa';
 		$produtotemp['tipo'] = 'CAMISAS';
 		$produtotemp['tamanho'] = 'G';
 		$produtotemp['cor'] = 'AZUL';
@@ -235,6 +237,7 @@ class CadastroProdutos extends CI_Controller {
 		$this->load->view('footer');
 	
 	}
+	
 	public function produtos()
 	{
 		$this->load->view('cadastroProdutos/produtos');

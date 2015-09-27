@@ -2,7 +2,7 @@ $(document).ready(function()
 {
 	editarProduto();
 	selecionar();
-	GravarProduto();
+	//GravarProduto();
 		
 });
 

@@ -5,7 +5,7 @@
 
 <div class="container">
 	<h4>Lista de Produtos</h4>
-	<table  class="striped " >
+	<table  class="bordered " >
 		<tr>
 			<th>#</th>
 			<th>Nome</th>

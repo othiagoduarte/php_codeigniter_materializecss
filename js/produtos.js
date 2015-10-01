@@ -6,6 +6,8 @@ $(document).ready(function()
 	cadastrarProduto();
 	
 	//GravarProduto(); // Tratar essa função para receber uma confirmação de cadastro
+
+
 		
 });
 
@@ -49,7 +51,8 @@ function excluirProduto(){
 		var modal=$('#excluirProduto');
 		
 		modal.css('max-height',700);
-		modal.openModal();		
+		modal.openModal();	
+		ClickBtnExcluirProduto();	
 			
 	});
 	
@@ -58,7 +61,31 @@ function selecionar(){
 
     $('select').material_select();
 
-  }
+ }
+
+ function ClickBtnExcluirProduto()
+ {
+ 	var btnExcluir=$("#excluirProduto");
+
+ 	btnExcluir.unbind('click');
+ 	btnExcluir.bind('click',function(e)
+ 	{
+ 		e.preventDefault();
+
+ 		  $.ajax({
+              'url' : "cadastroprodutos/AjaxRequestTeste",
+              'type' : 'POST',
+              'success' : function(data){ 
+              	 var result = JSON.parse( data ); 
+
+              		console.log(result.date +" Nome: " +result.nome);
+              }
+          });   
+
+ 	});
+
+
+ }
          
 		 
 function GravarProduto()

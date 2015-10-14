@@ -1,8 +1,20 @@
-<nav>
-<div class="nav-wrapper black">
-	<p>Plano Base - Painel de Controle</p>		
+<nav class="black lighten-1" role="navigation">
+  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Plano Base</a>
+      <ul class="right hide-on-med-and-down">
+      <li><a href="">PAG1</a></li>
+      <li><a href="">PAG1</a></li>
+      <li><a href="">PAG1</a></li>
+      <li><a href="">PAG1</a></li>
+    </ul>
+    <ul id="nav-mobile" class="side-nav">
+      <li><a href="">PAG1</a></li>
+        <li><a href="">PAG1</a></li>
+      <li><a href="">PAG1</a></li>
+      <li><a href="">PAG1</a></li>
+    </ul>
+    <a href="home" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
 </nav>
-
 <div class="container">
 	<h4>Lista de Produtos</h4>
 	<table  class="bordered " >

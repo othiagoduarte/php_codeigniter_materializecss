@@ -2,7 +2,7 @@
 	if( ! isset($detalhesProduto['nome'])) {
 	
 		$detalhesProduto = array();
-		$detalhesProduto['nome'] = '';
+		$detalhesProduto['nome'] = '';	
 		$detalhesProduto['preco'] = '';
 		$detalhesProduto['tamanho'] = '0';
 		$detalhesProduto['cor'] = '0';

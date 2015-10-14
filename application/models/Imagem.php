@@ -1,5 +1,5 @@
 <?php
-class ImagemModelagem extends CI_Model {
+class Imagem extends CI_Model {
 
 	public $idImagem='';
 	public $nome='';

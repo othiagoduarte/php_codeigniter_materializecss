@@ -6,9 +6,9 @@ class CadastroProdutos extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
-        $this->load->model('CorModelagem');
-		$this->load->model('tamanhoModelagem');
-		$this->load->model('TipoModelagem');
+        $this->load->model('Cor');
+		$this->load->model('tamanho');
+		$this->load->model('Tipo');
     	$this->load->helper('url_helper');
     }
 
@@ -17,9 +17,7 @@ class CadastroProdutos extends CI_Controller {
 		
 		/*Lista de produtos*/
 		$lista_produtos = array();
-		
-		 	
-		
+				
 		$produtotemp = array();	
 		$produtotemp['nome'] ='Camisa';
 		$produtotemp['tipo'] = 'CAMISAS';
@@ -148,19 +146,19 @@ class CadastroProdutos extends CI_Controller {
 		
 		$lista_cores = array();
 		
-		$ModelCores = new CorModelagem();
+		$ModelCores = new Cor();
 		$ModelCores->idCor='1';
         $ModelCores->nome='AZUL';            		
 				 
 		$lista_cores[] = $ModelCores;
 		
-		$ModelCores= new CorModelagem();
+		$ModelCores= new Cor();
 		$ModelCores->idCor='2';
         $ModelCores->nome='AMARELO';            		
 				 
 		$lista_cores[] = $ModelCores;
 		
-		$ModelCores= new CorModelagem();
+		$ModelCores= new Cor();
 		$ModelCores->idCor='3';
         $ModelCores->nome='VERMELJO';            		
 				 
@@ -169,31 +167,31 @@ class CadastroProdutos extends CI_Controller {
 		/*Lista de tamanhos*/
 		$lista_tamanhos = array();
 		
-		$tamanho = new TamanhoModelagem();
+		$tamanho = new Tamanho();
 		$tamanho->idTamanho = '1';
 		$tamanho->nome = 'PP';
 		
 		$lista_tamanhos[] = $tamanho;
 		
-		$tamanho = new TamanhoModelagem();
+		$tamanho = new Tamanho();
 		$tamanho->idTamanho = '2';
 		$tamanho->nome = 'P';
 		
 		$lista_tamanhos[] = $tamanho;
 		
-		$tamanho = new TamanhoModelagem();
+		$tamanho = new Tamanho();
 		$tamanho->idTamanho = '3';
 		$tamanho->nome = 'M';
 		
 		$lista_tamanhos[] = $tamanho;
 		
-		$tamanho = new TamanhoModelagem();
+		$tamanho = new Tamanho();
 		$tamanho->idTamanho = '4';
 		$tamanho->nome = 'G';
 		
 		$lista_tamanhos[] = $tamanho;
 		
-		$tamanho = new TamanhoModelagem();
+		$tamanho = new Tamanho();
 		$tamanho->idTamanho = '5';
 		$tamanho->nome = 'GG';
 		
@@ -206,18 +204,18 @@ class CadastroProdutos extends CI_Controller {
 		
 		$lista_tipos = array();
 		
-		$tipo = new TipoModelagem();
+		$tipo = new Tipo();
 		$tipo->idTipo = '1';
 		$tipo->nome = 'VESTUARIO';
 		$lista_tipos[] = $tipo; 				
 		
-		$tipo = new TipoModelagem();
+		$tipo = new Tipo();
 		$tipo->idTipo = '2';
 		$lista_tipo[] = 'PAPELARIA';
 		$tipo->nome = 'VESTUARIO';
 		$lista_tipos[] = $tipo; 				
 		
-		$tipo = new TipoModelagem();
+		$tipo = new Tipo();
 		$tipo->idTipo = '3';
 		$tipo->nome = 'OUTROS';
 		$lista_tipos[] = $tipo; 				
@@ -233,7 +231,7 @@ class CadastroProdutos extends CI_Controller {
 		/*Carregar view*/
 		
 		$this->load->view('header');
-		$this->load->view('cadastroProdutos/produtos', $data );
+		$this->load->view('cadastroProdutos/listarProdutos', $data );
 		$this->load->view('footer');
 	
 	}

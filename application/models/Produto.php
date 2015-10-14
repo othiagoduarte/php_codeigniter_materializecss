@@ -1,5 +1,5 @@
 <?php
-class ProdutosModelagem extends CI_Model {
+class Produtos extends CI_Model {
 
 		public $idProduto='';
 		public $nome='';

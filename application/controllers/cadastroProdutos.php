@@ -248,4 +248,9 @@ class CadastroProdutos extends CI_Controller {
 	{
 		$this->load->view('cadastroProdutos/corproduto');
 	}
+
+	public function AjaxRequestTeste()
+	{
+		echo json_encode( array( 'date' => date( 'H:i:s' ),'nome'=>'Jorge' ) );
+	}
 }

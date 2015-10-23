@@ -135,9 +135,7 @@ CREATE TABLE IF NOT EXISTS `produtos` (
 
 INSERT INTO `produtos` (`id`, `nome`, `id_tamanho`, `id_cor`, `id_tipo`, `id_imagem`) VALUES
 (1, 'Camisa Polo Manga Longa', 1, 1, 1, 0),
-(2, 'Camisa Polo Manga Longa', 1, 1, 1, 0),
-(3, 'Camisa Polo Manga Longa', 1, 1, 1, 0),
-(4, 'Camisa Polo', 1, 1, 1, 0);
+
 
 -- --------------------------------------------------------
 
@@ -180,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `tipo_produto` (
 --
 
 INSERT INTO `tipo_produto` (`id`, `nome`, `detalhe`) VALUES
-(1, 'CAMISA', NULL);
+(1, 'CAMISAS', NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

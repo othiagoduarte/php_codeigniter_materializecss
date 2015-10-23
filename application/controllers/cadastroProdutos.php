@@ -9,12 +9,14 @@ class CadastroProdutos extends CI_Controller {
         $this->load->model('Cor');
 		$this->load->model('tamanho');
 		$this->load->model('Tipo');
-    	$this->load->helper('url_helper');
+		$this->load->model('Produtos');
+		$this->load->helper('url_helper');
+		$this->load->helper('array');
+		
     }
 
 	public function index()
-	{
-		
+	{		
 		/*Lista de produtos*/
 		$lista_produtos = array();
 				
@@ -235,22 +237,102 @@ class CadastroProdutos extends CI_Controller {
 		$this->load->view('footer');
 	
 	}
-	
+	public function listar(){
+		
+		$Model=new Produtos();
+
+		//var_dump($Model->getProdutos());
+		var_dump($Model->getProdutos(1));
+		
+		
+	}
+	public function inserir(){
+		
+		var_dump($_POST);
+		$Model=new Produtos();
+		
+		$Model->id         = $this->input->post('id');
+		$Model->nome	   = $this->input->post('nome');
+		$Model->id_tipo    = $this->input->post('idtipo');
+		$Model->id_tamanho = $this->input->post('idtamanho');
+		$Model->id_cor     = $this->input->post('idcor');
+		$Model->id_imagem  = 0;//$this->input->post('idimagem');
+		$Model->preco  	   = $this->input->post('preco');
+		var_dump($Model);
+		echo $Model->insert();
+		
+	}
+	public function editar(){
+		
+		$Produto = new Produtos();
+		$Produto->id = 12;
+		$Produto->nome = $this->input->post('nome');
+		$Produto->id_tipo = $this->input->post('tipo');
+		$Produto->update();
+		header("Location: /cadastroprodutos");
+	}
+	public function excluir(){
+		$Produto = new Produtos();
+		$Produto->id = 12;
+		$Produto->delete;
+		header("Location: /cadastroprodutos");
+	}		
 	public function produtos()
-	{
+	{	$this->load->view('header');
 		$this->load->view('cadastroProdutos/produtos');
+		$this->load->view('footer');
 	}
 	public function tamanhoproduto()
-	{
+	{	$this->load->view('header');
 		$this->load->view('cadastroProdutos/tamanhoproduto');
+		$this->load->view('footer');
 	}
 	public function corproduto()
-	{
+	{	$this->load->view('header');
 		$this->load->view('cadastroProdutos/corproduto');
-	}
-
+		$this->load->view('footer');
+	}			
 	public function AjaxRequestTeste()
 	{
 		echo json_encode( array( 'date' => date( 'H:i:s' ),'nome'=>'Jorge' ) );
+	}
+	public function teste(){
+		$produto = new Produtos();
+		
+		/*
+		$produto->nome = 'Camisa Branca';
+		$produto->id_tipo = 1;
+		$produto->insert();
+		var_dump($produto);
+		
+		$newProduto = new Produtos();
+		//var_dump($produto->getProdutos());
+		$newProduto = random_element($produto->getProdutos());
+		
+		var_dump($newProduto);
+		
+		$newProduto->nome = 'Camisa velha'; 
+		$newProduto->update();
+			
+		//$newProduto = random_element($produto->getProdutos());
+		 
+		/*
+		
+		$newProduto->nome = 'Camisa Branca';
+		var_dump($newProduto);
+		$newProduto->BeginTrans();
+		$newProduto->update();
+		$newProduto->commit();
+		*/
+		/*
+		echo "Produto deletado";
+		
+		var_dump($newProduto);
+		
+		$newProduto->BeginTrans();
+		$newProduto->delete();
+		$newProduto->commit();
+		
+		*/
 	}
 }

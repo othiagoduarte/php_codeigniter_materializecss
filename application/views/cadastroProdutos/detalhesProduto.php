@@ -2,6 +2,7 @@
 	if( ! isset($detalhesProduto['nome'])) {
 	
 		$detalhesProduto = array();
+		$detalhesProduto['id'] = '';
 		$detalhesProduto['nome'] = '';	
 		$detalhesProduto['preco'] = '';
 		$detalhesProduto['tamanho'] = '0';
@@ -11,18 +12,19 @@
 ?>
 <div class="row col s12">
 	<div class="input-field  col s9">
+		<input id="id" type="hidden" name="id" value = <?php echo $detalhesProduto['id']  ?>>
 		<input id="nome" type="text" name="nome" value = <?php echo $detalhesProduto['nome']  ?>>
 		<label for="nome">Nome do Produto</label>
 	</div>
 	<div class="input-field  col s3">
-		<input id="preco" type="text" name="numbers" pattern="[0-9][.-,]+$" value = <?php echo $detalhesProduto['preco'] ?>>
+		<input id="preco" type="text" name="preco" pattern="[0-9][.-,]+$" value = <?php echo $detalhesProduto['preco'] ?>>
 		<label for="preco">Preço</label>
 	</div>
 </div>
 <div class="row col s12">
 	<div class="col s6 ">
 		<label>Tipo do produto</label>
-		<select class="browser-default" name="tipo"> 
+		<select class="browser-default" name="idtipo"> 
 			<option value="0" disabled selected>Selecione</option>
 			<?php foreach ($lista_tipos as $tipo) : ?>
 				<option value=
@@ -36,7 +38,7 @@
 	</div>
 	<div class="col s3 ">
 		<label>Tamanho</label>
-		<select class="browser-default" name="tamanho">
+		<select class="browser-default" name="idtamanho">
 			<option value="0" disabled  selected >Selecione</option>
 			<?php foreach ($lista_tamanhos as $tamanho) : ?>
 				<option value= 
@@ -49,7 +51,7 @@
 	</div>
 	<div class="col s3 ">
 		<label>Cor</label>
-		<select class="browser-default" name="cor">
+		<select class="browser-default" name="idcor">
 			<option value="0" disabled selected >Selecione</option>
 				<?php foreach ($lista_cores as $cor) : ?>
 					<option value= 
@@ -68,7 +70,7 @@
 				<input type="file" >
 			</div>
 			<div class="file-path-wrapper col s9">
-				<input class="file-path validate" type="text" placeholder="selecione uma imagem">
+				<input class="file-path validate" type="text" placeholder="selecione uma imagem" name="imagem">
 			</div>
 			<i class="material-icons col s1 medium">zoom_in</i>
 		</div>

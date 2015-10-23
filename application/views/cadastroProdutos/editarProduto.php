@@ -10,10 +10,10 @@
 ?>
 <h4>Edidar produto</h4>
 <div class="row col s12">
-	<form action="cadastroprodutos" method="post">
+	<form action="cadastroprodutos/editar" method="post">
 		<?php include "detalhesProduto.php" ?>	 						  
 		<div class="modal-footer">
-			<button id="gravarProduto" class="btn waves-effect waves-light " type="submit" name="action">
+			<button id="gravarProduto" class="btn waves-effect waves-light " type="submit">
 				Editar<i class="material-icons right">done_all</i>
 			</button>
 		</div>

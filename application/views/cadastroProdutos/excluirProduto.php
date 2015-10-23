@@ -9,10 +9,10 @@
 ?>
 <h4>Excluir produto</h4>
 <div class="row col s12">
-	<form action="cadastroprodutos" method="post">
+	<form action="cadastroprodutos/excluir" method="post">
 		<?php include "detalhesProduto.php" ?>	 						  
 		<div class="modal-footer">
-			<button id="excluirProduto" class="btn waves-effect waves-light red " type="submit" name="action">
+			<button id="excluirProduto" class="btn waves-effect waves-light red " type="submit">
 				excluir<i class="material-icons right">delete</i>
 			</button>
 		</div>

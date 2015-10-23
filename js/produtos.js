@@ -4,10 +4,8 @@ $(document).ready(function()
 	editarProduto();
 	excluirProduto();
 	cadastrarProduto();
-	
+
 	//GravarProduto(); // Tratar essa função para receber uma confirmação de cadastro
-
-
 		
 });
 
@@ -73,7 +71,7 @@ function selecionar(){
  		e.preventDefault();
 
  		  $.ajax({
-              'url' : "cadastroprodutos/AjaxRequestTeste",
+              'url' : "cadastroprodutos/excluir",
               'type' : 'POST',
               'success' : function(data){ 
               	 var result = JSON.parse( data ); 

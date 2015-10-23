@@ -70,7 +70,7 @@
 				<input type="file" >
 			</div>
 			<div class="file-path-wrapper col s9">
-				<input class="file-path validate" type="text" placeholder="selecione uma imagem" name="imagem">
+					<input class="file-path validate" type="text" placeholder="selecione uma imagem" name="imagem">
 			</div>
 			<i class="material-icons col s1 medium">zoom_in</i>
 		</div>

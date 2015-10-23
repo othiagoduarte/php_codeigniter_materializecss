@@ -249,6 +249,7 @@ class CadastroProdutos extends CI_Controller {
 	public function inserir(){
 		
 		var_dump($_POST);
+		var_dump($_FILES);
 		$Model=new Produtos();
 		
 		$Model->id         = $this->input->post('id');

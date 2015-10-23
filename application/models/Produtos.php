@@ -13,6 +13,7 @@ class Produtos extends CI_Model {
    	public function __construct(){
 	   parent::__construct();
    	}
+	
 	public function ConectarDB(){
 		return $this->load->database('dev'); 	#Desenvolvimento
 		// return $this->load->database(); 		#Produção
@@ -62,7 +63,7 @@ class Produtos extends CI_Model {
 	public function insert(){
 		
 		$this->ConectarDB();
-		//Grava produto
+		#Grava produto
 		$data= array();
 		$data['id']		   = $this->id;          
 		$data['nome']	   = $this->nome;	  
@@ -71,7 +72,7 @@ class Produtos extends CI_Model {
 		$data['id_cor']    = $this->id_cor;     
 		$data['id_imagem'] = $this->id_imagem;  
 		$this->db->insert('produtos', $data);
-		//Grava preço
+		#Grava preço
 		$data= array();
 		$data['id_produto']= $this->db->insert_id();
 		$data['preco']     = $this->preco;
@@ -80,7 +81,13 @@ class Produtos extends CI_Model {
 	}	
 	public function update(){
 		$this->ConectarDB();
+		#Altera produto
 		$this->db->update('produtos', $this, array('id' => $this->id));
+		#Grava preço
+		$data= array();
+		$data['id_produto']= $this->id;
+		$data['preco']     = $this->preco;
+		$this->db->insert('preco_produto', $data);
 	}
 	public function delete(){
 		$this->ConectarDB();
@@ -96,5 +103,4 @@ class Produtos extends CI_Model {
 	public function commit(){
 		$this->db->trans_complete();
 	}
-
 }

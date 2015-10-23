@@ -18,28 +18,28 @@
     <div class="row">
       <div class="col s12 m3">
         <div class="icon-block">
-          <img class="center" src="css/images/produto1.png"/>        
+          <img class="center" src="uploads/produto1.png"/>        
           <h5 class="center">Camiseta Verde</h5>
           <h6 class="center red-text"><b>R$ 29,90</b></h6>
         </div>
       </div>
       <div class="col s12 m3">
         <div class="icon-block">            
-          <img src="css/images/produto1.png"/>               
+          <img src="uploads/produto1.png"/>               
           <h5 class="center">Camiseta Verde</h5>
           <h6 class="center red-text"><b>R$ 29,90</b></h6>
         </div>
       </div>
     <div class="col s12 m3">
       <div class="icon-block">
-        <img src="css/images/produto1.png"/>               
+        <img src="uploads/produto1.png"/>               
         <h5 class="center">Camiseta Verde</h5>
         <h6 class="center red-text"><b>R$ 29,90</b></h6>
       </div>
     </div>
     <div class="col s12 m3">
       <div class="icon-block">
-        <img src="css/images/produto1.png"/> 
+        <img src="uploads/produto1.png"/> 
         <h5 class="center">Camiseta Verde</h5>
         <h6 class="center red-text"><b>R$ 29,90</b></h6>
       </div>
@@ -48,28 +48,28 @@
   <div class="row">
     <div class="col s12 m3">
       <div class="icon-block">
-        <img src="css/images/produto1.png"/>             
+        <img src="uploads/produto1.png"/>             
           <h5 class="center">Camiseta Verde</h5>
           <h6 class="center red-text"><b>R$ 29,90</b></h6>
       </div>
     </div>
     <div class="col s12 m3">
       <div class="icon-block">
-        <img src="css/images/produto1.png"/> 
+        <img src="uploads/produto1.png"/> 
         <h5 class="center">Camiseta Verde</h5>
         <h6 class="center red-text"><b>R$ 29,90</b></h6>
       </div>
     </div>
     <div class="col s12 m3">
       <div class="icon-block">
-        <img src="css/images/produto1.png"/> 
+        <img src="uploads/produto1.png"/> 
         <h5 class="center">Camiseta Verde</h5>
         <h6 class="center red-text"><b>R$ 29,90</b></h6>
       </div>
     </div>
     <div class="col s12 m3">
       <div class="icon-block">
-        <img src="css/images/produto1.png"/> 
+        <img src="uploads/produto1.png"/> 
           <h5 class="center">Camiseta Verde</h5>
           <h6 class="center red-text"><b>R$ 29,90</b></h6>
       </div>
